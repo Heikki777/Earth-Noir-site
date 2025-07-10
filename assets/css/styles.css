@@ -72,3 +72,9 @@ hr {
     background-color: #333;
     margin: 20px 0;
 }
+
+#screenshots {
+    display: flex;
+    gap: 1rem; /* space between screenshots */
+    justify-content: flex-start; /* align left */
+}

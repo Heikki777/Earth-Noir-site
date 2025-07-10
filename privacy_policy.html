@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Earth Noir - Privacy Policy</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script>
+        function showEmail() {
+            const email = 'earthnoirgame' + '@' + 'gmail.com';
+            const emailHTML = '<a href="mailto:' + email + '">' + email + '</a>';
+
+            const emailEn = document.getElementById('email-en');
+            if (emailEn) emailEn.innerHTML = emailHTML;
+
+            const emailEs = document.getElementById('email-es');
+            if (emailEs) emailEs.innerHTML = emailHTML;
+
+            const emailZh = document.getElementById('email-zh');
+            if (emailZh) emailZh.innerHTML = emailHTML;
+
+            const emailFi = document.getElementById('email-fi');
+            if (emailFi) emailFi.innerHTML = emailHTML;
+
+            const emailFr = document.getElementById('email-fr');
+            if (emailFr) emailFr.innerHTML = emailHTML; 
+
+            const emailDe = document.getElementById('email-de');
+            if (emailDe) emailDe.innerHTML = emailHTML; 
+
+            const emailJa = document.getElementById('email-ja');
+            if (emailJa) emailJa.innerHTML = emailHTML; 
+
+            const emailKo = document.getElementById('email-ko');
+            if (emailKo) emailKo.innerHTML = emailHTML; 
+
+            const emailPt = document.getElementById('email-pt-br');
+            if (emailPt) emailPt.innerHTML = emailHTML; 
+        }
+
+        function switchLanguage(lang) {
+            const contents = document.querySelectorAll('.lang-content');
+            contents.forEach(el => {
+                el.style.display = el.dataset.lang === lang ? 'block' : 'none';
+            });
+
+            const labels = document.querySelectorAll('.lang-label');
+            labels.forEach(el => {
+                el.style.display = el.dataset.lang === lang ? 'inline' : 'none';
+            });
+
+            const select = document.getElementById('language-select');
+            if (select.value !== lang) {
+                select.value = lang;
+            }
+
+            window.history.replaceState({}, '', '?lang=' + lang);
+        }
+
+        function getLanguageFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('lang') || 'en'; // Default to English
+        }
+
+        window.onload = function () {
+            showEmail();
+            const lang = getLanguageFromURL();
+            switchLanguage(lang);
+        };
+
+    </script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="privacy_policy.html">Privacy Policy</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <img src="/assets/images/earth_noir_logo.png" width="120" height="120"/>
+        <div id="language-labels">
+            <span class="lang-label" data-lang="en"><strong>Select Language:</strong></span>
+            <span class="lang-label" data-lang="es" style="display: none;"><strong>Seleccionar idioma:</strong></span>
+            <span class="lang-label" data-lang="zh" style="display: none;"><strong>选择语言：</strong></span>
+            <span class="lang-label" data-lang="fi" style="display: none;"><strong>Valitse kieli:</strong></span>
+            <span class="lang-label" data-lang="fr" style="display: none;"><strong>Choisir la langue :</strong></span>
+            <span class="lang-label" data-lang="de" style="display: none;"><strong>Sprache auswählen:</strong></span>
+            <span class="lang-label" data-lang="ja" style="display: none;"><strong>言語を選択：</strong></span>
+            <span class="lang-label" data-lang="ko" style="display: none;"><strong>언어 선택:</strong></span>
+            <span class="lang-label" data-lang="pt-br" style="display: none;"><strong>Selecionar idioma:</strong></span>
+        </div>
+
+        <select id="language-select" onchange="switchLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fi">Suomi</option>
+            <option value="fr">Français</option>
+            <option value="zh">中文 (简体)</option>
+            <option value="de">Deutsch</option>
+            <option value="ja">日本語</option>
+            <option value="ko">한국어</option>
+            <option value="pt-br">Português (Brasil)</option>
+        </select>
+
+
+        <!-- English Content -->
+        <div class="lang-content" data-lang="en">
+            <h1>Privacy Policy</h1>
+            <p><strong>Last Updated: 15.5.2025</strong></p>
+            <p>This Privacy Policy describes how we collect, use, and protect your personal information when you use our iOS game and website.</p>
+            <hr>
+            <h2>1. Information We Collect</h2>
+            <p>We do not collect or store any personal information directly from users through our game or website.</p>
+            <h3>Game Center Integration</h3>
+            <p>Our game uses Apple’s Game Center to enable leaderboards and achievements. Game Center is managed by Apple, and we do not have access to any personal data collected by Game Center. Please refer to Apple’s Privacy Policy for more information.</p>
+            <h3>In-App Purchases</h3>
+            <p>Our game includes in-app purchases, which are processed securely through Apple’s App Store. We do not collect or store any payment information. For details on Apple’s data handling practices, please see Apple’s Privacy Policy.</p>
+            <hr>
+            <h2>2. Third-Party Services</h2>
+            <p>We do not integrate third-party analytics, ads, or data collection services.</p>
+            <hr>
+            <h2>3. Data Security</h2>
+            <p>Since we do not collect personal data, we do not store or manage any user information.</p>
+            <hr>
+            <h2>4. User Rights</h2>
+            <p>You can manage your Game Center settings and in-app purchase preferences through your Apple ID settings.</p>
+            <hr>
+            <h2>5. Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated date.</p>
+            <hr>
+            <h2>6. Contact Us</h2>
+            <p>If you have any questions or concerns about this Privacy Policy, please use the contact form on our website or reach out via our support email at <span id="email-en">[Loading email...]</span>.</p>
+        </div>
+
+        <!-- Spanish Content -->
+        <div class="lang-content" data-lang="es" style="display: none;">
+            <h1>Política de Privacidad</h1>
+            <p><strong>Última actualización: 15.5.2025</strong></p>
+            <p>Esta Política de Privacidad describe cómo recopilamos, usamos y protegemos su información personal cuando utiliza nuestro juego para iOS y nuestro sitio web.</p>
+            <hr>
+            <h2>1. Información que recopilamos</h2>
+            <p>No recopilamos ni almacenamos información personal directamente de los usuarios a través de nuestro juego o sitio web.</p>
+            <h3>Integración con Game Center</h3>
+            <p>Nuestro juego utiliza el Game Center de Apple para habilitar tablas de clasificación y logros. Game Center es gestionado por Apple y no tenemos acceso a ningún dato personal recopilado por ellos. Consulte la Política de Privacidad de Apple para obtener más información.</p>
+            <h3>Compras dentro de la aplicación</h3>
+            <p>Nuestro juego incluye compras dentro de la aplicación, las cuales son procesadas de forma segura a través de la App Store de Apple. No recopilamos ni almacenamos información de pago. Para más detalles, consulte la Política de Privacidad de Apple.</p>
+            <hr>
+            <h2>2. Servicios de terceros</h2>
+            <p>No integramos análisis, anuncios ni servicios de recopilación de datos de terceros.</p>
+            <hr>
+            <h2>3. Seguridad de los datos</h2>
+            <p>Como no recopilamos datos personales, no almacenamos ni gestionamos ninguna información del usuario.</p>
+            <hr>
+            <h2>4. Derechos del usuario</h2>
+            <p>Puede gestionar su configuración de Game Center y preferencias de compras dentro de la aplicación a través de la configuración de su ID de Apple.</p>
+            <hr>
+            <h2>5. Cambios en esta Política de Privacidad</h2>
+            <p>Podemos actualizar esta Política de Privacidad ocasionalmente. Cualquier cambio se publicará en esta página con la fecha actualizada.</p>
+            <hr>
+            <h2>6. Contáctenos</h2>
+            <p>Si tiene alguna pregunta o inquietud sobre esta Política de Privacidad, utilice el formulario de contacto en nuestro sitio web o comuníquese a través de nuestro correo de soporte: <span id="email-es">[Cargando correo electrónico...]</span>.</p>
+        </div>
+
+        <!-- Chinese (Simplified) Content -->
+        <div class="lang-content" data-lang="zh" style="display: none;">
+            <h1>隐私政策</h1>
+            <p><strong>最后更新日期：2025年5月15日</strong></p>
+            <p>本隐私政策说明了当您使用我们的 iOS 游戏和网站时，我们如何收集、使用和保护您的个人信息。</p>
+            <hr>
+            <h2>1. 我们收集的信息</h2>
+            <p>我们不会通过游戏或网站直接收集或存储用户的任何个人信息。</p>
+            <h3>Game Center 集成</h3>
+            <p>我们的游戏使用 Apple 的 Game Center 来启用排行榜和成就功能。Game Center 由 Apple 管理，我们无法访问 Game Center 收集的任何个人数据。有关更多信息，请参阅 Apple 的隐私政策。</p>
+            <h3>应用内购买</h3>
+            <p>我们的游戏包含应用内购买功能，这些购买通过 Apple 的 App Store 安全处理。我们不会收集或存储任何付款信息。有关 Apple 数据处理做法的详细信息，请查看 Apple 的隐私政策。</p>
+            <hr>
+            <h2>2. 第三方服务</h2>
+            <p>我们不集成任何第三方分析、广告或数据收集服务。</p>
+            <hr>
+            <h2>3. 数据安全</h2>
+            <p>由于我们不收集个人数据，因此也不会存储或管理任何用户信息。</p>
+            <hr>
+            <h2>4. 用户权利</h2>
+            <p>您可以通过 Apple ID 设置管理您的 Game Center 设置和应用内购买偏好。</p>
+            <hr>
+            <h2>5. 隐私政策的变更</h2>
+            <p>我们可能会不时更新本隐私政策。任何更改将发布在本页面，并注明更新日期。</p>
+            <hr>
+            <h2>6. 联系我们</h2>
+            <p>如果您对本隐私政策有任何疑问或担忧，请使用我们网站上的联系表单，或通过我们的支持邮箱联系我们：<span id="email-zh">[加载电子邮箱中...]</span>。</p>
+        </div>
+
+        <!-- German Content -->
+        <div class="lang-content" data-lang="de" style="display: none;">
+            <h1>Datenschutzerklärung</h1>
+            <p><strong>Letzte Aktualisierung: 15.5.2025</strong></p>
+            <p>Diese Datenschutzerklärung beschreibt, wie wir Ihre persönlichen Daten erfassen, verwenden und schützen, wenn Sie unser iOS-Spiel und unsere Website nutzen.</p>
+            <hr>
+            <h2>1. Welche Daten wir erfassen</h2>
+            <p>Wir erfassen oder speichern keine persönlichen Daten direkt von Nutzern über unser Spiel oder unsere Website.</p>
+            <h3>Game Center-Integration</h3>
+            <p>Unser Spiel verwendet Apples Game Center zur Anzeige von Bestenlisten und Erfolgen. Das Game Center wird von Apple verwaltet, und wir haben keinen Zugriff auf personenbezogene Daten, die über das Game Center erfasst werden. Weitere Informationen finden Sie in der Datenschutzerklärung von Apple.</p>
+            <h3>In-App-Käufe</h3>
+            <p>Unser Spiel enthält In-App-Käufe, die sicher über Apples App Store abgewickelt werden. Wir erfassen oder speichern keine Zahlungsinformationen. Einzelheiten zur Datenverarbeitung durch Apple finden Sie in der Datenschutzerklärung von Apple.</p>
+            <hr>
+            <h2>2. Dienste Dritter</h2>
+            <p>Wir integrieren keine Drittanbieter-Dienste wie Analyse-Tools, Werbung oder Datenverfolgung.</p>
+            <hr>
+            <h2>3. Datensicherheit</h2>
+            <p>Da wir keine persönlichen Daten erfassen, speichern oder verwalten wir auch keine Nutzerdaten.</p>
+            <hr>
+            <h2>4. Rechte der Nutzer</h2>
+            <p>Sie können Ihre Game Center-Einstellungen und In-App-Kaufpräferenzen über Ihre Apple-ID-Einstellungen verwalten.</p>
+            <hr>
+            <h2>5. Änderungen dieser Datenschutzerklärung</h2>
+            <p>Diese Datenschutzerklärung kann von Zeit zu Zeit aktualisiert werden. Alle Änderungen werden auf dieser Seite mit dem aktualisierten Datum veröffentlicht.</p>
+            <hr>
+            <h2>6. Kontakt</h2>
+            <p>Wenn Sie Fragen oder Bedenken bezüglich dieser Datenschutzerklärung haben, verwenden Sie bitte das Kontaktformular auf unserer Website oder schreiben Sie uns über unsere Support-E-Mail an <span id="email-de">[E-Mail wird geladen...]</span>.</p>
+        </div>
+
+        <!-- Finnish Content -->
+        <div class="lang-content" data-lang="fi" style="display: none;">
+            <h1>Tietosuojakäytäntö</h1>
+            <p><strong>Päivitetty: 15.5.2025</strong></p>
+            <p>Tämä tietosuojakäytäntö kuvaa, miten keräämme, käytämme ja suojaamme henkilötietojasi, kun käytät iOS-peliämme ja verkkosivustoamme.</p>
+            <hr>
+            <h2>1. Keräämämme tiedot</h2>
+            <p>Emme kerää tai tallenna mitään henkilökohtaisia tietoja suoraan käyttäjiltä pelin tai verkkosivuston kautta.</p>
+            <h3>Game Center -integrointi</h3>
+            <p>Pelimme käyttää Applen Game Centeriä mahdollistamaan tulostaulut ja saavutukset. Game Centeriä hallinnoi Apple, emmekä saa käyttöömme mitään sen keräämiä henkilötietoja. Lisätietoja saat tutustumalla Applen tietosuojakäytäntöön.</p>
+            <h3>Sovelluksen sisäiset ostot</h3>
+            <p>Pelissämme on sovelluksen sisäisiä ostoja, jotka käsitellään turvallisesti Applen App Storen kautta. Emme kerää tai tallenna maksutietoja. Katso Applen tietosuojakäytännöstä lisätietoja heidän tietojenkäsittelystään.</p>
+            <hr>
+            <h2>2. Kolmannen osapuolen palvelut</h2>
+            <p>Emme käytä kolmansien osapuolten analytiikkaa, mainontaa tai tietojenkeruupalveluita.</p>
+            <hr>
+            <h2>3. Tietoturva</h2>
+            <p>Koska emme kerää henkilötietoja, emme myöskään tallenna tai hallinnoi käyttäjätietoja.</p>
+            <hr>
+            <h2>4. Käyttäjän oikeudet</h2>
+            <p>Voit hallita Game Center -asetuksia ja sovelluksen sisäisiä ostovalintoja Apple ID -asetuksissasi.</p>
+            <hr>
+            <h2>5. Muutokset tähän tietosuojakäytäntöön</h2>
+            <p>Voimme ajoittain päivittää tätä tietosuojakäytäntöä. Kaikki muutokset julkaistaan tällä sivulla ja päivämäärä päivitetään.</p>
+            <hr>
+            <h2>6. Yhteydenotto</h2>
+            <p>Jos sinulla on kysyttävää tai huolia tästä tietosuojakäytännöstä, käytä verkkosivumme yhteydenottolomaketta tai ota meihin yhteyttä sähköpostitse osoitteessa <span id="email-fi">[Ladataan sähköpostiosoitetta...]</span>.</p>
+        </div>
+
+        <!-- French Content -->
+        <div class="lang-content" data-lang="fr" style="display: none;">
+            <h1>Politique de Confidentialité</h1>
+            <p><strong>Dernière mise à jour : 15.5.2025</strong></p>
+            <p>Cette politique de confidentialité décrit comment nous collectons, utilisons et protégeons vos informations personnelles lorsque vous utilisez notre jeu iOS et notre site web.</p>
+            <hr>
+            <h2>1. Informations que nous collectons</h2>
+            <p>Nous ne collectons ni ne stockons aucune information personnelle directement auprès des utilisateurs via notre jeu ou notre site web.</p>
+            <h3>Intégration avec Game Center</h3>
+            <p>Notre jeu utilise Game Center d’Apple pour permettre les classements et les réussites. Game Center est géré par Apple, et nous n’avons pas accès aux données personnelles collectées par Game Center. Veuillez consulter la politique de confidentialité d’Apple pour plus d’informations.</p>
+            <h3>Achats intégrés</h3>
+            <p>Notre jeu inclut des achats intégrés, traités de manière sécurisée via l’App Store d’Apple. Nous ne collectons ni ne stockons d’informations de paiement. Pour plus de détails sur les pratiques de gestion des données d’Apple, veuillez consulter leur politique de confidentialité.</p>
+            <hr>
+            <h2>2. Services tiers</h2>
+            <p>Nous n’intégrons pas de services tiers d’analyse, de publicité ou de collecte de données.</p>
+            <hr>
+            <h2>3. Sécurité des données</h2>
+            <p>Étant donné que nous ne collectons pas de données personnelles, nous ne stockons ni ne gérons d’informations utilisateur.</p>
+            <hr>
+            <h2>4. Droits des utilisateurs</h2>
+            <p>Vous pouvez gérer vos paramètres Game Center et vos préférences d’achats intégrés via les paramètres de votre identifiant Apple.</p>
+            <hr>
+            <h2>5. Modifications de cette politique de confidentialité</h2>
+            <p>Nous pouvons mettre à jour cette politique de confidentialité de temps en temps. Toute modification sera publiée sur cette page avec une date de mise à jour.</p>
+            <hr>
+            <h2>6. Contactez-nous</h2>
+            <p>Si vous avez des questions ou des préoccupations concernant cette politique de confidentialité, veuillez utiliser le formulaire de contact sur notre site web ou nous écrire à l’adresse suivante : <span id="email-fr">[Chargement de l'email...]</span>.</p>
+        </div>
+
+        <!-- Japanese Content -->
+        <div class="lang-content" data-lang="ja" style="display: none;">
+            <h1>プライバシーポリシー</h1>
+            <p><strong>最終更新日: 2025年5月15日</strong></p>
+            <p>本プライバシーポリシーは、当社のiOSゲームおよびウェブサイトをご利用の際に、お客様の個人情報をどのように収集・使用・保護するかについて説明するものです。</p>
+            <hr>
+            <h2>1. 収集する情報</h2>
+            <p>当社は、ゲームまたはウェブサイトを通じて、ユーザーから直接個人情報を収集または保存することはありません。</p>
+            <h3>Game Centerの統合</h3>
+            <p>当社のゲームは、リーダーボードや実績機能を提供するためにAppleのGame Centerを使用しています。Game CenterはAppleによって管理されており、当社はGame Centerによって収集された個人データにアクセスできません。詳細はAppleのプライバシーポリシーをご参照ください。</p>
+            <h3>アプリ内課金</h3>
+            <p>当社のゲームにはアプリ内課金が含まれており、AppleのApp Storeを通じて安全に処理されます。当社はお支払い情報を収集または保存しておりません。Appleのデータ取り扱いについては、Appleのプライバシーポリシーをご確認ください。</p>
+            <hr>
+            <h2>2. サードパーティサービス</h2>
+            <p>当社は、サードパーティの分析ツール、広告、またはデータ収集サービスを統合していません。</p>
+            <hr>
+            <h2>3. データの安全性</h2>
+            <p>当社は個人データを収集していないため、ユーザー情報を保存または管理することはありません。</p>
+            <hr>
+            <h2>4. ユーザーの権利</h2>
+            <p>Game Centerの設定やアプリ内課金の設定は、Apple IDの設定から管理できます。</p>
+            <hr>
+            <h2>5. プライバシーポリシーの変更</h2>
+            <p>本プライバシーポリシーは、随時更新される可能性があります。変更があった場合は、本ページに更新日とともに掲載します。</p>
+            <hr>
+            <h2>6. お問い合わせ</h2>
+            <p>本プライバシーポリシーに関するご質問やご不明点がある場合は、当社ウェブサイトのお問い合わせフォームまたはサポート用メールアドレス（<span id="email-ja">[メール読み込み中...]</span>）までご連絡ください。</p>
+        </div>
+
+        <!-- Korean Content -->
+        <div class="lang-content" data-lang="ko" style="display: none;">
+            <h1>개인정보 처리방침</h1>
+            <p><strong>최종 업데이트: 2025년 5월 15일</strong></p>
+            <p>이 개인정보 처리방침은 당사의 iOS 게임 및 웹사이트 이용 시 귀하의 개인정보를 수집, 사용 및 보호하는 방법을 설명합니다.</p>
+            <hr>
+            <h2>1. 수집하는 정보</h2>
+            <p>저희는 게임이나 웹사이트를 통해 사용자로부터 직접적으로 어떤 개인정보도 수집하거나 저장하지 않습니다.</p>
+            <h3>Game Center 연동</h3>
+            <p>저희 게임은 Apple의 Game Center를 사용하여 리더보드와 업적 기능을 제공합니다. Game Center는 Apple이 관리하며, 당사는 Game Center에서 수집된 어떠한 개인정보에도 접근할 수 없습니다. 자세한 내용은 Apple의 개인정보 보호정책을 참고해 주세요.</p>
+            <h3>인앱 구매</h3>
+            <p>저희 게임에는 인앱 구매 기능이 포함되어 있으며, 이는 Apple의 App Store를 통해 안전하게 처리됩니다. 당사는 결제 정보는 수집하거나 저장하지 않습니다. Apple의 데이터 처리 방침에 대한 자세한 내용은 Apple의 개인정보 보호정책을 참조해 주세요.</p>
+            <hr>
+            <h2>2. 제3자 서비스</h2>
+            <p>저희는 제3자의 분석, 광고 또는 데이터 수집 서비스를 통합하지 않습니다.</p>
+            <hr>
+            <h2>3. 데이터 보안</h2>
+            <p>저희는 개인정보를 수집하지 않기 때문에 어떠한 사용자 정보도 저장하거나 관리하지 않습니다.</p>
+            <hr>
+            <h2>4. 사용자 권리</h2>
+            <p>Apple ID 설정을 통해 Game Center 설정 및 인앱 구매 환경을 관리할 수 있습니다.</p>
+            <hr>
+            <h2>5. 개인정보 처리방침 변경</h2>
+            <p>본 개인정보 처리방침은 변경될 수 있으며, 변경 사항은 본 페이지에 업데이트 날짜와 함께 게시됩니다.</p>
+            <hr>
+            <h2>6. 문의하기</h2>
+            <p>이 개인정보 처리방침에 대한 질문이나 우려 사항이 있으시면, 웹사이트의 연락처 양식을 사용하거나 <span id="email-ko">[이메일 로딩 중...]</span>으로 지원 이메일을 통해 연락해 주세요.</p>
+        </div>
+
+        <!-- Portuguese (Brazil) Content -->
+        <div class="lang-content" data-lang="pt-br" style="display: none;">
+            <h1>Política de Privacidade</h1>
+            <p><strong>Última atualização: 15.5.2025</strong></p>
+            <p>Esta Política de Privacidade descreve como coletamos, usamos e protegemos suas informações pessoais quando você usa nosso jogo para iOS e nosso site.</p>
+            <hr>
+            <h2>1. Informações que Coletamos</h2>
+            <p>Não coletamos nem armazenamos nenhuma informação pessoal diretamente dos usuários por meio do nosso jogo ou site.</p>
+            <h3>Integração com o Game Center</h3>
+            <p>Nosso jogo utiliza o Game Center da Apple para habilitar classificações e conquistas. O Game Center é gerenciado pela Apple, e não temos acesso a nenhum dado pessoal coletado por ele. Consulte a Política de Privacidade da Apple para mais informações.</p>
+            <h3>Compras no Aplicativo</h3>
+            <p>Nosso jogo inclui compras no aplicativo, processadas com segurança através da App Store da Apple. Não coletamos nem armazenamos informações de pagamento. Para detalhes sobre as práticas da Apple em relação aos dados, consulte a Política de Privacidade da Apple.</p>
+            <hr>
+            <h2>2. Serviços de Terceiros</h2>
+            <p>Não integramos serviços de terceiros para análise, anúncios ou coleta de dados.</p>
+            <hr>
+            <h2>3. Segurança de Dados</h2>
+            <p>Como não coletamos dados pessoais, não armazenamos nem gerenciamos informações dos usuários.</p>
+            <hr>
+            <h2>4. Direitos dos Usuários</h2>
+            <p>Você pode gerenciar as configurações do Game Center e preferências de compras no aplicativo por meio das configurações do seu ID Apple.</p>
+            <hr>
+            <h2>5. Alterações nesta Política de Privacidade</h2>
+            <p>Podemos atualizar esta Política de Privacidade periodicamente. Quaisquer alterações serão publicadas nesta página com a data atualizada.</p>
+            <hr>
+            <h2>6. Fale Conosco</h2>
+            <p>Se você tiver alguma dúvida ou preocupação sobre esta Política de Privacidade, use o formulário de contato em nosso site ou entre em contato por e-mail de suporte em <span id="email-pt-br">[Carregando e-mail...]</span>.</p>
+        </div>
+
+
+
+</body>
+</html>
